@@ -1,0 +1,671 @@
+/* ============================================
+   RESET & BASE
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #faf6f3;
+    color: #2d1f1a;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ============================================
+   TYPOGRAPHY & COLOR
+   ============================================ */
+h1, h2, h3, h4 {
+    font-weight: 700;
+    color: #2d1f1a;
+}
+
+.section-label {
+    display: inline-block;
+    background: #fce4ec;
+    color: #b35f7a;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 0.3rem 1.2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.section-header h2 {
+    font-size: 2.2rem;
+    margin: 0.3rem 0 0.5rem;
+}
+
+.section-header p {
+    color: #5a4a48;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* ============================================
+   BUTTON
+   ============================================ */
+.btn {
+    display: inline-block;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background: #e8a0b4;
+    color: #fff;
+}
+.btn-primary:hover {
+    background: #d48a9e;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(232, 160, 180, 0.4);
+}
+
+.btn-secondary {
+    background: #fff;
+    color: #b35f7a;
+    border: 2px solid #e8a0b4;
+}
+.btn-secondary:hover {
+    background: #fce4ec;
+}
+
+/* ============================================
+   HEADER (Flexbox)
+   ============================================ */
+.header {
+    background: #fff;
+    padding: 1rem 0;
+    border-bottom: 2px solid #fce4ec;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+.logo-icon {
+    font-size: 2rem;
+}
+.logo h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #b35f7a;
+}
+
+.nav {
+    display: flex;
+    gap: 2rem;
+    font-weight: 500;
+}
+.nav a {
+    color: #3a2a28;
+    padding: 0.4rem 0;
+    border-bottom: 3px solid transparent;
+    transition: 0.2s;
+}
+.nav a:hover {
+    border-bottom-color: #e8a0b4;
+    color: #b35f7a;
+}
+
+/* ============================================
+   HERO (Grid)
+   ============================================ */
+.hero {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #fce4ec 0%, #f8d7e0 100%);
+}
+
+.hero-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.hero-sub {
+    font-weight: 500;
+    font-size: 1rem;
+    color: #b35f7a;
+}
+
+.hero-text h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0.3rem 0 1rem;
+    line-height: 1.2;
+}
+
+.hero-text p {
+    font-size: 1.05rem;
+    color: #4a3a38;
+    max-width: 480px;
+    margin-bottom: 2rem;
+}
+
+.hero-image-placeholder {
+    background: #fce4ec;
+    border-radius: 30px;
+    padding: 3rem 2rem;
+    text-align: center;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #b35f7a;
+}
+.hero-image-placeholder span {
+    font-size: 5rem;
+}
+.hero-image-placeholder p {
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+/* ============================================
+   TENTANG (Grid)
+   ============================================ */
+.tentang {
+    padding: 4rem 0;
+    background: #fff;
+}
+
+.tentang-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.tentang-text h2 {
+    font-size: 2.8rem;
+    margin: 0.5rem 0 1rem;
+}
+
+.tentang-text p {
+    color: #4a3a38;
+    margin-bottom: 1rem;
+}
+
+.keunggulan-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+}
+
+.keunggulan-list li {
+    background: #fce4ec;
+    padding: 0.5rem 1.2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    color: #b35f7a;
+    font-size: 0.9rem;
+}
+
+.tentang-image-placeholder {
+    background: #fce4ec;
+    border-radius: 30px;
+    padding: 3rem 2rem;
+    text-align: center;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.tentang-image-placeholder span {
+    font-size: 5rem;
+}
+.tentang-image-placeholder p {
+    font-style: italic;
+    color: #2d1f1a;
+}
+
+/* ============================================
+   PRODUK (Grid & Tabel)
+   ============================================ */
+.produk {
+    padding: 4rem 0;
+    background: #faf6f3;
+}
+
+.produk-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.8rem;
+    margin-bottom: 3rem;
+}
+
+.produk-card {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+    transition: 0.3s;
+}
+.produk-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+.produk-image {
+    position: relative;
+    background: #fce4ec;
+}
+.produk-image img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.produk-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #e8a0b4;
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.3rem 1rem;
+    border-radius: 50px;
+    text-transform: uppercase;
+}
+
+.produk-badge.original {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    left: auto;
+    background: #2d1f1a;
+    color: #fce4ec;
+    font-size: 0.6rem;
+    padding: 0.2rem 0.8rem;
+    border-radius: 50px;
+}
+
+.produk-info {
+    padding: 1.2rem 1.2rem 1.5rem;
+}
+.produk-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+}
+.produk-desc {
+    font-size: 0.85rem;
+    color: #7a6a68;
+    margin-bottom: 0.8rem;
+}
+.produk-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.produk-harga {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #b35f7a;
+}
+.produk-stok {
+    font-size: 0.85rem;
+    color: #9a8a88;
+}
+
+.produk-rating {
+    font-size: 0.8rem;
+    color: #b35f7a;
+    margin-top: 0.4rem;
+    font-weight: 600;
+    background: #fce4ec;
+    padding: 0.2rem 0.8rem;
+    border-radius: 30px;
+    display: inline-block;
+}
+
+.produk-brand {
+    font-size: 0.75rem;
+    color: #b35f7a;
+    margin-top: 0.3rem;
+    font-weight: 600;
+    background: #faf6f3;
+    padding: 0.2rem 0.8rem;
+    border-radius: 30px;
+    display: inline-block;
+    border: 1px solid #fce4ec;
+}
+
+/* ============================================
+   TABEL
+   ============================================ */
+.produk-tabel-wrapper {
+    background: #fff;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+    border: 1px solid #f0e8e4;
+    overflow-x: auto;
+}
+
+.produk-tabel-wrapper h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1.2rem;
+    text-align: center;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+.data-table th {
+    background: #fce4ec;
+    color: #2d1f1a;
+    font-weight: 600;
+    padding: 0.8rem 1rem;
+    text-align: left;
+    border-bottom: 2px solid #f8d7e0;
+}
+
+.data-table td {
+    padding: 0.7rem 1rem;
+    border-bottom: 1px solid #f0e8e4;
+}
+
+.data-table tbody tr:hover {
+    background: #faf6f3;
+}
+.data-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* ============================================
+   CTA PROMO
+   ============================================ */
+.produk-cta {
+    margin-top: 3rem;
+    background: linear-gradient(135deg, #fce4ec, #f8d7e0);
+    border-radius: 30px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+}
+.cta-icon {
+    font-size: 3rem;
+    display: block;
+}
+.cta-content h3 {
+    font-size: 2rem;
+    margin: 0.8rem 0 1rem;
+}
+.cta-content p {
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
+    color: #5a4a48;
+}
+
+/* ============================================
+   FORM
+   ============================================ */
+.pesanan {
+    padding: 4rem 0;
+    background: #fff;
+}
+
+.form-card {
+    max-width: 780px;
+    margin: 0 auto;
+    background: #faf6f3;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+    border: 1px solid #f0e8e4;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #2d1f1a;
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    font-family: 'Inter', sans-serif;
+    padding: 0.8rem 1rem;
+    border: 2px solid #f0e8e4;
+    border-radius: 12px;
+    font-size: 1rem;
+    background: #fff;
+    transition: 0.2s;
+    width: 100%;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #e8a0b4;
+    box-shadow: 0 0 0 4px rgba(232, 160, 180, 0.15);
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.05rem;
+    margin-top: 0.5rem;
+}
+
+.pesanan-info {
+    text-align: center;
+    margin-top: 2rem;
+    background: #fce4ec;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.pesanan-info p {
+    color: #2d1f1a;
+    font-weight: 500;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer {
+    background: #2d1f1a;
+    color: #fce4ec;
+    padding: 2.5rem 0 1.5rem;
+}
+
+.footer-inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem;
+    text-align: left;
+}
+
+.footer-brand .logo-icon {
+    font-size: 2.5rem;
+}
+.footer-brand h3 {
+    font-size: 1.8rem;
+    color: #fce4ec;
+    margin: 0.3rem 0;
+}
+.footer-brand p {
+    opacity: 0.8;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+    color: #fce4ec;
+    margin-bottom: 0.8rem;
+}
+.footer-links a {
+    display: block;
+    margin-bottom: 0.4rem;
+    opacity: 0.8;
+    transition: 0.2s;
+}
+.footer-links a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.footer-contact p {
+    opacity: 0.8;
+    margin-bottom: 0.3rem;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding: 1.2rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin-top: 2rem;
+}
+
+/* ============================================
+   MEDIA QUERY - RESPONSIF
+   ============================================ */
+@media (max-width: 768px) {
+    .header-inner {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+    .nav {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+    .hero-text h2 {
+        font-size: 2.2rem;
+    }
+    .hero-text p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .tentang-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+    .keunggulan-list {
+        justify-content: center;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .form-card {
+        padding: 1.5rem;
+    }
+
+    .produk-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+
+    .footer-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .data-table {
+        font-size: 0.8rem;
+    }
+    .data-table th,
+    .data-table td {
+        padding: 0.5rem 0.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text h2 {
+        font-size: 1.8rem;
+    }
+    .section-header h2 {
+        font-size: 1.6rem;
+    }
+    .nav a {
+        font-size: 0.85rem;
+    }
+    .produk-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+    .produk-image img {
+        height: 160px;
+    }
+}
