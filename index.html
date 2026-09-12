@@ -4,16 +4,49 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Michie's Shop – Toko Aksesoris & Figur</title>
-
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
-
-    <!-- CSS External (di dalam folder css/) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+
+    <!-- ===== 🌈 LAYER 1: AURORA PINK GRADIENT ===== -->
+    <div class="aurora-bg">
+        <div class="aurora-blob blob-1"></div>
+        <div class="aurora-blob blob-2"></div>
+        <div class="aurora-blob blob-3"></div>
+        <div class="aurora-blob blob-4"></div>
+    </div>
+
+    <!-- ===== 🌟 LAYER 2: NOISE TEXTURE ===== -->
+    <div class="noise-overlay"></div>
+
+    <!-- ===== ✨ LAYER 3: BOLA BLUR PINK ===== -->
+    <div class="animated-bg">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- ===== 🌸 LAYER 4: SAKURA JATUH ===== -->
+    <div class="sakura-container">
+        <span>🌸</span><span>🌸</span><span>🌸</span><span>🌸</span>
+        <span>🌸</span><span>🌸</span><span>🌸</span><span>🌸</span>
+    </div>
+
+    <!-- ===== ⭐ LAYER 5: SPARKLES ===== -->
+    <div class="sparkles">
+        <span>✨</span><span>✨</span><span>✨</span><span>✨</span>
+        <span>✨</span><span>✨</span><span>✨</span><span>✨</span>
+        <span>✨</span><span>✨</span><span>✨</span><span>✨</span>
+    </div>
+
+    <!-- ===== 💖 LAYER 6: HATI NAIK ===== -->
+    <div class="hearts-container">
+        <span>💖</span><span>💕</span><span>💗</span><span>💓</span>
+        <span>💖</span><span>💕</span>
+    </div>
 
     <!-- ===== HEADER ===== -->
     <header class="header">
@@ -27,17 +60,17 @@
                 <a href="#tentang">Tentang</a>
                 <a href="#produk">Produk</a>
                 <a href="#pesanan">Pesan</a>
+                <a href="#riwayat">Riwayat</a>
             </nav>
         </div>
     </header>
 
-    <!-- ===== MAIN ===== -->
     <main>
 
-        <!-- ===== BERANDA / HERO ===== -->
+        <!-- ===== BERANDA ===== -->
         <section id="beranda" class="hero">
             <div class="container hero-inner">
-                <div class="hero-text">
+                <div class="hero-text fade-in">
                     <span class="hero-sub">✨ Official Reseller POP MART & Figur Koleksi</span>
                     <h2>Michie's Shop</h2>
                     <p>
@@ -48,8 +81,8 @@
                     </p>
                     <a href="#produk" class="btn btn-primary">Lihat Koleksi →</a>
                 </div>
-                <div class="hero-image">
-                    <div class="hero-image-placeholder">
+                <div class="hero-image fade-in">
+                    <div class="hero-image-placeholder float-anim">
                         <span>🧸</span>
                         <p>— koleksi figur original —</p>
                     </div>
@@ -61,7 +94,7 @@
         <section id="tentang" class="tentang">
             <div class="container">
                 <div class="tentang-grid">
-                    <div class="tentang-text">
+                    <div class="tentang-text fade-in">
                         <span class="section-label">Tentang Kami</span>
                         <h2>Michie's Shop</h2>
                         <p>
@@ -75,13 +108,13 @@
                         </p>
                         <ul class="keunggulan-list">
                             <li>✅ 100% Original</li>
-                            <li>🧸 POP MART Official Reseller</li>
+                            <li>🧸 POP MART Reseller</li>
                             <li>📦 Pengiriman Cepat</li>
                             <li>⭐ Garansi Keaslian</li>
                         </ul>
                     </div>
-                    <div class="tentang-image">
-                        <div class="tentang-image-placeholder">
+                    <div class="tentang-image fade-in">
+                        <div class="tentang-image-placeholder float-anim">
                             <span>🎀</span>
                             <p>— reseller terpercaya —</p>
                         </div>
@@ -93,17 +126,15 @@
         <!-- ===== PRODUK ===== -->
         <section id="produk" class="produk">
             <div class="container">
-                <div class="section-header">
+                <div class="section-header fade-in">
                     <span class="section-label">Koleksi</span>
                     <h2>Produk POP MART & Figur</h2>
                     <p>Koleksi eksklusif dari berbagai brand ternama, 100% original.</p>
                 </div>
 
-                <!-- Grid produk (URUTAN: Best Seller di depan) -->
                 <div class="produk-grid">
 
-                    <!-- ===== PRODUK 1: HACIPUPU Constellation (BEST SELLER - paling depan) ===== -->
-                    <div class="produk-card">
+                    <div class="produk-card fade-in">
                         <div class="produk-image">
                             <img src="assets/hacipupu-star.jpg" alt="POP MART HACIPUPU Constellation" />
                             <span class="produk-badge">Best Seller</span>
@@ -111,7 +142,7 @@
                         </div>
                         <div class="produk-info">
                             <h3>POP MART HACIPUPU</h3>
-                            <p class="produk-desc">The Constellation Series – Vinyl Plush Blind Box</p>
+                            <p class="produk-desc">The Constellation Series</p>
                             <div class="produk-meta">
                                 <span class="produk-harga">Rp 179.000</span>
                                 <span class="produk-stok">Stok: 12</span>
@@ -121,15 +152,14 @@
                         </div>
                     </div>
 
-                    <!-- ===== PRODUK 2: Snoopy ===== -->
-                    <div class="produk-card">
+                    <div class="produk-card fade-in">
                         <div class="produk-image">
                             <img src="assets/snoopy.jpg" alt="POP MART Peanuts Snoopy" />
                             <span class="produk-badge original">100% Original</span>
                         </div>
                         <div class="produk-info">
                             <h3>POP MART Peanuts Snoopy</h3>
-                            <p class="produk-desc">Snoopy Comic Life Series – 75th Anniversary</p>
+                            <p class="produk-desc">Snoopy Comic Life Series</p>
                             <div class="produk-meta">
                                 <span class="produk-harga">Rp 179.000</span>
                                 <span class="produk-stok">Stok: 15</span>
@@ -139,15 +169,14 @@
                         </div>
                     </div>
 
-                    <!-- ===== PRODUK 3: HACIPUPU Home ===== -->
-                    <div class="produk-card">
+                    <div class="produk-card fade-in">
                         <div class="produk-image">
                             <img src="assets/hacipupu-home.jpg" alt="POP MART HACIPUPU Take Me Home" />
                             <span class="produk-badge original">100% Original</span>
                         </div>
                         <div class="produk-info">
                             <h3>POP MART HACIPUPU</h3>
-                            <p class="produk-desc">Take Me Home Series – Vinyl Plush Pendant</p>
+                            <p class="produk-desc">Take Me Home Series</p>
                             <div class="produk-meta">
                                 <span class="produk-harga">Rp 279.000</span>
                                 <span class="produk-stok">Stok: 10</span>
@@ -157,15 +186,14 @@
                         </div>
                     </div>
 
-                    <!-- ===== PRODUK 4: Skullpanda ===== -->
-                    <div class="produk-card">
+                    <div class="produk-card fade-in">
                         <div class="produk-image">
                             <img src="assets/skullpanda.jpg" alt="POP MART Skullpanda" />
                             <span class="produk-badge original">100% Original</span>
                         </div>
                         <div class="produk-info">
                             <h3>POP MART Skullpanda</h3>
-                            <p class="produk-desc">L'impressionnisme Masker – Series Figur</p>
+                            <p class="produk-desc">L'impressionnisme Masker</p>
                             <div class="produk-meta">
                                 <span class="produk-harga">Rp 349.000</span>
                                 <span class="produk-stok">Stok: 8</span>
@@ -176,93 +204,39 @@
                     </div>
 
                 </div>
-
-                <!-- Tabel Produk (URUTAN: Best Seller di depan) -->
-                <div class="produk-tabel-wrapper">
-                    <h3>Daftar Produk Lengkap</h3>
-                    <table class="data-table">
-                        <thead>
-                            <tr>
-                                <th>Nama Produk</th>
-                                <th>Brand</th>
-                                <th>Harga</th>
-                                <th>Stok</th>
-                                <th>Rating</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>POP MART HACIPUPU Constellation ⭐ BEST SELLER</td>
-                                <td>HACIPUPU</td>
-                                <td>Rp 179.000</td>
-                                <td>12</td>
-                                <td>⭐ 5.0 (5.9RB)</td>
-                            </tr>
-                            <tr>
-                                <td>POP MART Peanuts Snoopy</td>
-                                <td>Snoopy Peanuts</td>
-                                <td>Rp 179.000</td>
-                                <td>15</td>
-                                <td>⭐ 5.0</td>
-                            </tr>
-                            <tr>
-                                <td>POP MART HACIPUPU Take Me Home</td>
-                                <td>HACIPUPU</td>
-                                <td>Rp 279.000</td>
-                                <td>10</td>
-                                <td>⭐ 4.9</td>
-                            </tr>
-                            <tr>
-                                <td>POP MART Skullpanda</td>
-                                <td>Skullpanda</td>
-                                <td>Rp 349.000</td>
-                                <td>8</td>
-                                <td>⭐ -</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <!-- CTA Promo -->
-                <div class="produk-cta">
-                    <div class="cta-content">
-                        <span class="cta-icon">🎀</span>
-                        <h3>✨ Promo Spesial! ✨</h3>
-                        <p>Beli 2 produk POP MART dapatkan <strong>diskon 10%</strong>!<br />
-                        Semua produk 100% Original – Garansi keaslian.</p>
-                        <a href="#pesanan" class="btn btn-secondary">Pesan Sekarang</a>
-                    </div>
-                </div>
-
             </div>
         </section>
 
         <!-- ===== FORM PESANAN ===== -->
         <section id="pesanan" class="pesanan">
             <div class="container">
-                <div class="section-header">
+                <div class="section-header fade-in">
                     <span class="section-label">Pemesanan</span>
                     <h2>Buat Pesanan</h2>
                     <p>Isi form di bawah ini untuk memesan produk dari Michie's Shop.</p>
                 </div>
 
-                <form action="proses-pesanan.php" method="post" class="form-card">
+                <form id="formPesanan" class="form-card fade-in">
 
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="nama">Nama Lengkap</label>
-                            <input type="text" id="nama" name="nama" placeholder="Contoh: Michelle Angela" required />
+                            <label for="namaPelanggan">Nama Pelanggan</label>
+                            <input type="text" id="namaPelanggan" placeholder="Contoh: Michelle Angela" />
                         </div>
                         <div class="form-group">
-                            <label for="email">Alamat Email</label>
-                            <input type="email" id="email" name="email" placeholder="michelle@email.com" required />
+                            <label for="kategoriPelanggan">Kategori Pelanggan</label>
+                            <select id="kategoriPelanggan">
+                                <option value="umum">Umum (tanpa diskon)</option>
+                                <option value="member">Member (diskon 5%)</option>
+                                <option value="reseller">Reseller (diskon 10%)</option>
+                            </select>
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="produk">Pilih Produk</label>
-                            <select id="produk" name="produk" required>
+                            <label for="pilihProduk">Pilih Produk</label>
+                            <select id="pilihProduk">
                                 <option value="">— Pilih Produk —</option>
                                 <option value="hacipupu-star">POP MART HACIPUPU Constellation ⭐</option>
                                 <option value="snoopy">POP MART Peanuts Snoopy</option>
@@ -271,40 +245,63 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="jumlah">Jumlah</label>
-                            <input type="number" id="jumlah" name="jumlah" min="1" value="1" required />
+                            <label for="jumlahProduk">Jumlah</label>
+                            <input type="number" id="jumlahProduk" min="1" value="1" />
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="tanggal">Tanggal Pesanan</label>
-                            <input type="date" id="tanggal" name="tanggal" required />
+                            <label for="namaProduk">Nama Produk</label>
+                            <input type="text" id="namaProduk" readonly placeholder="Pilih produk dulu" />
                         </div>
                         <div class="form-group">
-                            <label for="telepon">Nomor Telepon</label>
-                            <input type="tel" id="telepon" name="telepon" placeholder="0812-3456-7890" />
+                            <label for="hargaSatuan">Harga Satuan</label>
+                            <input type="text" id="hargaSatuan" readonly placeholder="Pilih produk dulu" />
                         </div>
                     </div>
 
                     <div class="form-group full-width">
                         <label for="alamat">Alamat Pengiriman</label>
-                        <textarea id="alamat" name="alamat" rows="4" placeholder="Tulis alamat lengkap pengiriman di sini"></textarea>
-                    </div>
-
-                    <div class="form-group full-width">
-                        <label for="catatan">Catatan Tambahan</label>
-                        <textarea id="catatan" name="catatan" rows="3" placeholder="Contoh: bungkus sebagai hadiah, permintaan khusus, dll."></textarea>
+                        <textarea id="alamat" rows="3" placeholder="Tulis alamat lengkap pengiriman (wajib diisi)"></textarea>
                     </div>
 
                     <button type="submit" class="btn btn-primary btn-submit">Buat Pesanan</button>
 
                 </form>
 
-                <div class="pesanan-info">
-                    <p>🎀 Setelah pesanan dibuat, kami akan mengirimkan konfirmasi melalui email dalam 1x24 jam.</p>
+                <div id="hasilTransaksi" class="hasil-transaksi"></div>
+
+            </div>
+        </section>
+
+        <!-- ===== RIWAYAT TRANSAKSI ===== -->
+        <section id="riwayat" class="riwayat">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <span class="section-label">Riwayat</span>
+                    <h2>Riwayat Transaksi</h2>
+                    <p>Daftar pesanan yang sudah dibuat.</p>
                 </div>
 
+                <div class="produk-tabel-wrapper fade-in">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Pelanggan</th>
+                                <th>Produk</th>
+                                <th>Harga</th>
+                                <th>Jml</th>
+                                <th>Subtotal</th>
+                                <th>Diskon</th>
+                                <th>Pajak</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabelRiwayat"></tbody>
+                    </table>
+                </div>
             </div>
         </section>
 
@@ -324,6 +321,7 @@
                 <a href="#tentang">Tentang</a>
                 <a href="#produk">Produk</a>
                 <a href="#pesanan">Pesan</a>
+                <a href="#riwayat">Riwayat</a>
             </div>
             <div class="footer-contact">
                 <h4>Kontak</h4>
@@ -334,10 +332,11 @@
         </div>
         <div class="footer-bottom">
             <div class="container">
-                <p>&copy; 2026 Michie's Shop – Official Reseller POP MART | Tugas Semester 3</p>
+                <p>&copy; 2026 Michie's Shop – Official Reseller POP MART</p>
             </div>
         </div>
     </footer>
 
+    <script src="script/script.js"></script>
 </body>
 </html>
